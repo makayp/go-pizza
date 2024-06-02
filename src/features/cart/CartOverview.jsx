@@ -12,8 +12,8 @@ function CartOverview() {
   if (!totalCartQuantity) return null;
 
   return (
-    <div className="flex justify-between bg-slate-950 p-4 text-sm uppercase text-stone-200 sm:px-6 md:text-base">
-      <p className="space-x-4 font-semibold text-stone-200">
+    <div className=" z-10 flex justify-between bg-slate-950 p-4 text-sm uppercase text-slate-300 sm:px-6 md:text-base">
+      <p className="space-x-4 font-semibold">
         <span>
           {totalCartQuantity} pizza{totalCartQuantity > 1 && "s"}
         </span>

@@ -6,7 +6,7 @@ function Home() {
   const { username } = useSelector((store) => store.user);
 
   return (
-    <div className="my-10 px-4 text-center sm:my-16">
+    <div className="border-box my-10 px-4 text-center sm:my-16">
       <h1 className="mb-8 text-xl font-semibold sm:text-3xl">
         <span className="capitalize">The best pizza.</span>
         <br />
