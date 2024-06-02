@@ -31,8 +31,8 @@
     animation: loading 1s infinite linear;
   }
 
-  #page::-webkit-scrollbar-x {
-    display: none !important;
+  #page::-webkit-scrollbar {
+    display: none;
   }
 
   @keyframes loading {

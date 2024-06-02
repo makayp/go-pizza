@@ -89,7 +89,7 @@ function CreateOrder() {
               disabled={isLoadingAddress}
             ></input>
           </div>
-          <span className="z-50 sm:absolute sm:right-[3px] sm:top-[3px] md:right-[4px] md:top-[5px]">
+          <span className="sm:absolute sm:right-[3px] sm:top-[3px] md:right-[4px] md:top-[5px]">
             <Button
               disabled={isLoadingAddress}
               onClick={(e) => {
@@ -113,12 +113,12 @@ function CreateOrder() {
             type="checkbox"
             name="priority"
             id="priority"
-            className="h-6 w-6 accent-yellow-400 focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-offset-2"
+            className="h-6 w-6 accent-sky-600 focus:outline-none focus:ring focus:ring-sky-500 focus:ring-offset-2"
             value={withPriority}
             onChange={(e) => setWithPriority(e.target.checked)}
           />
           <label htmlFor="priority" className=" font-medium">
-            Want to yo give your order priority?
+            Want to give your order priority?
           </label>
         </div>
 

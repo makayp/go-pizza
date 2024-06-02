@@ -39,7 +39,7 @@ function Menu() {
       </ul>
       <span
         ref={scrollButton}
-        className="scrollBtn absolute bottom-20  rounded-md border-2 border-sky-700 bg-slate-700 transition-all duration-300"
+        className="scrollBtn absolute bottom-16  rounded-md border-2 border-sky-700 bg-slate-700 transition-all duration-300"
       >
         <a
           href="#menu"

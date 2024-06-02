@@ -9,43 +9,48 @@ import CreateOrder, {
   action as createOrderAction,
 } from "./features/order/CreateOrder";
 import { action as updateOrderAction } from "./features/order/UpdateOrder";
+import PageNotFound from "./ui/PageNotFound";
+
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/menu",
+        element: <Menu />,
+        loader: menuLoader,
+        errorElement: <Error />,
+      },
+      {
+        path: "/order/new",
+        element: <CreateOrder />,
+        action: createOrderAction,
+      },
+      {
+        path: "/order/:orderId",
+        element: <Order />,
+        loader: orderLoader,
+        errorElement: <Error />,
+        action: updateOrderAction,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "*",
+        element: <PageNotFound />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      element: <AppLayout />,
-      errorElement: <Error />,
-      children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: "/menu",
-          element: <Menu />,
-          loader: menuLoader,
-          errorElement: <Error />,
-        },
-        {
-          path: "/order/new",
-          element: <CreateOrder />,
-          action: createOrderAction,
-        },
-        {
-          path: "/order/:orderId",
-          element: <Order />,
-          loader: orderLoader,
-          errorElement: <Error />,
-          action: updateOrderAction,
-        },
-        {
-          path: "/cart",
-          element: <Cart />,
-        },
-      ],
-    },
-  ]);
-
   return <RouterProvider router={router} />;
 }
 

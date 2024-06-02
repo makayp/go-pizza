@@ -1,5 +1,3 @@
-// Test ID: IIDSAT
-
 import { useFetcher, useLoaderData } from "react-router-dom";
 import { getOrder } from "../../services/apiRestaurant";
 import {
@@ -25,7 +23,6 @@ function Order() {
     [fetcher],
   );
 
-  // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address, these are only for the restaurant staff
   const {
     id,
     status,
@@ -60,7 +57,7 @@ function Order() {
             ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
             : "Order should have arrived"}
         </p>
-        <p className="text-xs text-stone-500">
+        <p className="text-xs text-slate-500">
           (Estimated delivery: {formatDate(estimatedDelivery)})
         </p>
       </div>
@@ -80,12 +77,12 @@ function Order() {
       </ul>
 
       <div className="space-y-2 bg-sky-100 px-6 py-5">
-        <p className="text-sm font-medium text-stone-600">
-          Price pizza: {formatCurrency(orderPrice)}
+        <p className="text-sm font-medium text-slate-600">
+          Order price: {formatCurrency(orderPrice)}
         </p>
         {priority && (
-          <p className="text-sm font-medium text-stone-600">
-            Price priority: {formatCurrency(priorityPrice)}
+          <p className="text-sm font-medium text-slate-600">
+            Priority fee: {formatCurrency(priorityPrice)}
           </p>
         )}
         <p className="font-bold">

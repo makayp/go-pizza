@@ -6,8 +6,8 @@ function Username() {
   if (!username) return null;
 
   return (
-    <div className="hidden text-sm font-semibold text-slate-100 md:block">
-      {username}
+    <div className="hidden text-sm font-semibold capitalize text-slate-100 md:block">
+      Hi, {username}
     </div>
   );
 }

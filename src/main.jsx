@@ -7,7 +7,6 @@ import store from "./store.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* {console.log(store)} */}
     <Provider store={store}>
       <App />
     </Provider>

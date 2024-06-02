@@ -12,14 +12,14 @@ function CreateUser() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (!username) return;
+    if (!username || username.trim().length < 1) return;
     dispatch(updateName(username));
     navigate("/menu");
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <p className="mb-4 text-sm text-stone-600 sm:text-base">
+      <p className="mb-4 text-sm text-slate-500 sm:text-base">
         👋 Welcome! Please start by telling us your name:
       </p>
 
