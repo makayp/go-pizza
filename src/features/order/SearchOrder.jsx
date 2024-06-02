@@ -7,7 +7,8 @@ function SearchOrder() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    navigate(`/order/${query}`);
+    const orderId = query.replace("#", "").trim();
+    navigate(`/order/${orderId}`);
     setQuery("");
   }
 
