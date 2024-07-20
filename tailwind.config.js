@@ -6,7 +6,6 @@ export default {
     fontFamily: {
       sans: "Roboto Mono, monospace",
     },
-    extend: {},
   },
   darkMode: "selector",
   plugins: [],

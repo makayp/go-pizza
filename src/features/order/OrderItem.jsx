@@ -6,7 +6,7 @@ function OrderItem({ item, isLoadingIngredients, ingredients }) {
   return (
     <li className="space-y-1 py-3">
       <div className="flex items-center justify-between gap-4 text-sm">
-        <p>
+        <p className="font-semibold">
           <span className="font-bold">{quantity}&times;</span> {name}
         </p>
         <p className="font-bold">{formatCurrency(totalPrice)}</p>
